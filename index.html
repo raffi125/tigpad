@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media TIGPAD</title>
+    <title>Media Sosial TIGPAD</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@700;900&display=swap');
         
+        /* Palet Warna */
         :root {
             --color-primary: #facc15; 
             --color-accent: #713f12; 
             --color-bg-light: #fef08a; 
             --color-online: #22c55e;
-            --color-danger: #ef4444; /* Merah untuk badge OPEN */
+            --color-danger: #ef4444; 
         }
 
         body {
@@ -30,6 +31,7 @@
             -webkit-overflow-scrolling: touch;
         }
 
+        /* Latar belakang animasi */
         .bg-animated {
             position: fixed;
             top: 0;
@@ -162,20 +164,20 @@
             bottom: -8px;
             left: 50%;
             transform: translateX(-50%);
-            height: 4px;
+            height: 3px;
             background-color: var(--color-accent);
             border-radius: 2px;
             animation: lineExpand 5s ease-in-out infinite;
         }
 
         @keyframes textSpacing {
-            0%, 100% { letter-spacing: -0.02em; transform: scale(1); }
-            50% { letter-spacing: 0.12em; transform: scale(1.02); }
+            0%, 100% { letter-spacing: -0.01em; transform: scale(1); }
+            50% { letter-spacing: 0.1em; transform: scale(1.02); }
         }
 
         @keyframes lineExpand {
-            0%, 100% { width: 30px; opacity: 0.4; }
-            50% { width: 90px; opacity: 1; }
+            0%, 100% { width: 25px; opacity: 0.4; }
+            50% { width: 80px; opacity: 1; }
         }
 
         .brand-description {
@@ -209,6 +211,7 @@
             box-shadow: 0 4px 10px rgba(113, 63, 18, 0.05);
         }
 
+        /* Gaya Khusus Rekrutmen */
         .recruit-card {
             background: var(--color-accent) !important;
             color: #ffffff !important;
@@ -223,14 +226,13 @@
         .recruit-card .icon-wrapper { background: #ffffff; color: var(--color-accent); }
         .recruit-card .arrow-btn { color: #ffffff; opacity: 0.8; }
 
-        /* MODIFIKASI: Badge OPEN menjadi MERAH */
         .recruit-card::before {
-            content: 'OPEN';
+            content: 'BUKA';
             position: absolute;
             top: 12px;
             right: -25px;
-            background: var(--color-danger); /* Warna Merah */
-            color: #ffffff; /* Teks Putih agar kontras di atas merah */
+            background: var(--color-danger); 
+            color: #ffffff; 
             font-size: 0.6rem;
             font-weight: 900;
             padding: 2px 30px;
@@ -288,11 +290,12 @@
 </head>
 <body>
 
+    <!-- Animasi Partikel -->
     <div class="bg-animated" id="bg-particles"></div>
 
     <div class="main-container">
         
-        <div class="top-badge">Social Media TIGPAD</div>
+        <div class="top-badge">Media Sosial TIGPAD</div>
 
         <header class="brand-header">
             <div class="profile-wrapper">
@@ -305,7 +308,8 @@
         <p class="brand-description typing-cursor" id="typewriter-text"></p>
 
         <nav class="links-grid">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOt6wXCZ6VPyFGl4mf-3lYUQ8kyRJQ5_OSijNVhuxHxhxsIg/viewform" target="_blank" rel="noopener" class="link-card recruit-card">
+            <!-- 1. Rekrutmen -->
+            <a href="https://tigpad.com/recruitment" target="_blank" rel="noopener" class="link-card recruit-card">
                 <div class="icon-wrapper"><i class="fas fa-user-plus"></i></div>
                 <div class="text-content">
                     <h3>Open Recruitment Volunteer</h3>
@@ -314,15 +318,27 @@
                 <i class="fas fa-chevron-right arrow-btn"></i>
             </a>
 
+            <!-- 2. Situs Web Resmi -->
             <a href="https://daniramadhannugraha.github.io/Website-Komunitas-TIGPAD/" target="_blank" rel="noopener" class="link-card">
                 <div class="icon-wrapper"><i class="fas fa-globe"></i></div>
                 <div class="text-content">
                     <h3>Situs Web Resmi</h3>
-                    <p>Layanan digital & informasi ekosistem TIGPAD.</p>
+                    <p>Layanan digital & pusat informasi ekosistem TIGPAD.</p>
                 </div>
                 <i class="fas fa-chevron-right arrow-btn"></i>
             </a>
 
+            <!-- 3. Instagram -->
+            <a href="https://instagram.com/tigpad.unpad" target="_blank" rel="noopener" class="link-card">
+                <div class="icon-wrapper"><i class="fa-brands fa-instagram"></i></div>
+                <div class="text-content">
+                    <h3>Instagram</h3>
+                    <p>Update harian, info komunitas & dokumentasi kegiatan.</p>
+                </div>
+                <i class="fas fa-chevron-right arrow-btn"></i>
+            </a>
+
+            <!-- 4. Gmail -->
             <a href="mailto:tigpadunpad25@gmail.com" class="link-card">
                 <div class="icon-wrapper"><i class="fas fa-envelope"></i></div>
                 <div class="text-content">
@@ -331,34 +347,28 @@
                 </div>
                 <i class="fas fa-chevron-right arrow-btn"></i>
             </a>
-
-            <a href="https://www.instagram.com/tigpad.unpad/" target="_blank" rel="noopener" class="link-card">
-                <div class="icon-wrapper"><i class="fa-brands fa-instagram"></i></div>
-                <div class="text-content">
-                    <h3>Instagram</h3>
-                    <p>Update harian, info komunitas & dokumentasi.</p>
-                </div>
-                <i class="fas fa-chevron-right arrow-btn"></i>
-            </a>
-
-            <a href="https://www.tiktok.com/@tigpad.unpad" target="_blank" rel="noopener" class="link-card">
+            
+            <!-- 5. TikTok -->
+            <a href="https://tiktok.com/@tigpad.unpad" target="_blank" rel="noopener" class="link-card">
                 <div class="icon-wrapper"><i class="fa-brands fa-tiktok"></i></div>
                 <div class="text-content">
                     <h3>TikTok</h3>
-                    <p>Tonton konten kreatif & video seru terbaru.</p>
+                    <p>Tonton konten kreatif & video seru terbaru kami.</p>
                 </div>
                 <i class="fas fa-chevron-right arrow-btn"></i>
             </a>
-            
+
+            <!-- 6. X (Twitter) -->
             <a href="https://x.com/TigpadUnpad" target="_blank" rel="noopener" class="link-card">
                 <div class="icon-wrapper"><i class="fa-brands fa-x-twitter"></i></div>
                 <div class="text-content">
                     <h3>X (Twitter)</h3>
-                    <p>Ikuti berita singkat dan diskusi komunitas.</p>
+                    <p>Ikuti berita singkat dan diskusi komunitas terhangat.</p>
                 </div>
                 <i class="fas fa-chevron-right arrow-btn"></i>
             </a>
 
+            <!-- 7. WhatsApp -->
             <a href="https://wa.me/message/ZKUXIFCMF2GTF1" target="_blank" rel="noopener" class="link-card">
                 <div class="icon-wrapper"><i class="fa-brands fa-whatsapp"></i></div>
                 <div class="text-content">
@@ -376,6 +386,7 @@
     </div>
 
     <script>
+        // Membuat partikel melayang di background
         function createFloatingBubbles() {
             const container = document.getElementById('bg-particles');
             const bubbleCount = 20;
@@ -392,9 +403,10 @@
             }
         }
 
+        // Efek mengetik untuk deskripsi
         function initTypewriter() {
             const textElement = document.getElementById('typewriter-text');
-            const textToType = "Selamat datang di Komunitas TIGPAD";
+            const textToType = "Selamat datang di Komunitas TIGPAD.";
             let index = 0;
             function type() {
                 if (index < textToType.length) {
