@@ -211,45 +211,14 @@
             box-shadow: 0 4px 10px rgba(113, 63, 18, 0.05);
         }
 
-        /* Gaya Khusus Rekrutmen */
-        .recruit-card {
-            background: var(--color-accent) !important;
-            color: #ffffff !important;
-            box-shadow: 0 10px 20px rgba(113, 63, 18, 0.3);
-            border: none;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .recruit-card .text-content h3 { color: #ffffff; }
-        .recruit-card .text-content p { color: rgba(255, 255, 255, 0.85); }
-        .recruit-card .icon-wrapper { background: #ffffff; color: var(--color-accent); }
-        .recruit-card .arrow-btn { color: #ffffff; opacity: 0.8; }
-
-        .recruit-card::before {
-            content: 'BUKA';
-            position: absolute;
-            top: 12px;
-            right: -25px;
-            background: var(--color-danger); 
-            color: #ffffff; 
-            font-size: 0.6rem;
-            font-weight: 900;
-            padding: 2px 30px;
-            transform: rotate(45deg);
-            box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
-        }
-
+        
         .link-card:hover {
             transform: translateY(-5px);
             background: #ffffff;
             box-shadow: 0 12px 25px rgba(113, 63, 18, 0.15);
         }
 
-        .recruit-card:hover {
-            background: #5a320e !important;
-            transform: translateY(-7px);
-        }
+        
 
         .icon-wrapper {
             width: 3.25rem; height: 3.25rem;
@@ -308,16 +277,7 @@
         <p class="brand-description typing-cursor" id="typewriter-text"></p>
 
         <nav class="links-grid">
-            <!-- 1. Rekrutmen -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOt6wXCZ6VPyFGl4mf-3lYUQ8kyRJQ5_OSijNVhuxHxhxsIg/viewform" target="_blank" rel="noopener" class="link-card recruit-card">
-                <div class="icon-wrapper"><i class="fas fa-user-plus"></i></div>
-                <div class="text-content">
-                    <h3>Open Recruitment Volunteer</h3>
-                    <p>Jadilah bagian dari perjalanan inspiratif TIGPAD.</p>
-                </div>
-                <i class="fas fa-chevron-right arrow-btn"></i>
-            </a>
-
+            
             <!-- 2. Situs Web Resmi -->
             <a href="https://daniramadhannugraha.github.io/Website-Komunitas-TIGPAD/" target="_blank" rel="noopener" class="link-card">
                 <div class="icon-wrapper"><i class="fas fa-globe"></i></div>
